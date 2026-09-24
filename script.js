@@ -54,9 +54,7 @@ const openProject = (card) => {
 };
 
 document.querySelectorAll(".project-card").forEach((card) => {
-  card.addEventListener("click", (event) => {
-    if (event.target.closest("button") || event.currentTarget === event.target) openProject(card);
-  });
+  card.addEventListener("click", () => openProject(card));
   card.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
